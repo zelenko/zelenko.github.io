@@ -2,7 +2,8 @@
 My GibHub page: [zelenko.github.io](https://zelenko.github.io/)
 
 
-### Features
+### Accounts
 
-* Contact info
-* Links to social media accounts
+* [LinkedIn](https://www.linkedin.com/in/vzelenko/)
+* [Twitter](https://twitter.com/vzelenko)
+* [GitHub](https://github.com/zelenko)
