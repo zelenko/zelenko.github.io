@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+   <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+   <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+<div data-role="page">
+   <div data-role="header">
+      <h2>Form Multiple Selection</h2>
+   </div>
+   <div data-role="main" class="ui-content">
+      <form method="get" action="jquery_mobile/demo2.php">
+         <fieldset class="ui-field-contain">
+            <label for="test">Multiple Select</label>
+            <select id="test" multiple="multiple" data-native-menu="false" name="test[]">
+               <option value="Mumbai">Mumbai</option>
+               <option value="Pune">Pune</option>
+               <option value="Belgaum">Belgaum</option>
+               <option value="Chennai">Chennai</option>
+               <option value="Bangalore">Bangalore</option>
+            </select>
+         </fieldset>
+         <input type="submit" value="Submit" name="submit" data-inline="true">
+      </form>
+   </div>
+</div>
+</body>
+</html>

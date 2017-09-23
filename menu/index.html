@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+   <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+   <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+   <script>
+         $(function() {
+            $( "[data-role='navbar']" ).navbar();
+            $( "[data-role='header'], [data-role='footer']" ).toolbar();
+         });
+         // Update the the toolbar's contents
+         $( document ).on( "pagecontainerchange", function() {
+            // Each of the 4 pages in this example has a data-title attribute
+            // which value is equal to the nav button's text
+            // For e.g., on first page: <div data-role="page" data-title="Details">
+            var current = $( ".ui-page-active" ).jqmData( "title" );
+            // Change the heading
+            $( "[data-role='header'] h1" ).text( current );
+            // Remove active class
+            $( "[data-role='navbar'] a.ui-btn-active" ).removeClass( "ui-btn-active" );
+            // Add active class to current nav button
+            $( "[data-role='navbar'] a" ).each(function() {
+               if ( $( this ).text() === current ) {
+                  $( this ).addClass( "ui-btn-active" );
+               }
+            });
+         });
+   </script>
+</head>
+<body>
+   <div data-role="header" data-theme="a">
+      <a href="" data-rel="back" class="ui-btn ui-btn-left ui-alt-icon ui-nodisc-icon ui-corner-all ui-btn-icon-notext ui-icon-carat-l">Back</a>
+      <h1>Details</h1>
+   </div>
+   <div data-role="page" data-title="Details" class="jqm-demos">
+      <div role="main" class="ui-content jqm-content jqm-fullwidth">
+        <h1>jQuery Mobile</h1>
+         <p>The jQuery Mobile is a user interface framework which is built on jQuery core and used for developing responsive websites or applications that are accessible on mobile, tablet and desktop devices. It uses features of both jQuery and jQueryUI to provide API features for mobile web applications.</p>
+           <ul class="list">
+           <li><p>The jQuery Mobile creates web applications in such a way that it will work the same way on the mobile, tablet and desktop devices.</p></li>
+           <li><p>The jQuery Mobile is compatible with other frameworks such as <i>PhoneGap</i>, <i>Whitelight</i> etc.</p></li>
+           <li><p>The jQuery Mobile provides set of touch friendly form inputs and UI widgets.</p></li>
+           <li><p>The progressive enhancement brings you functionality to all mobile, tablet and desktop platforms and adds efficient page loads and wider device support.</p></li>
+         </ul>
+		 
+		 
+		 <ul data-role="listview" data-inset="true">
+         <li><a href="menu3.html">
+            <img src="images/apple.jpg" class="ui-li-thumb">
+            <h2>Menu 3</h2>
+            <p>Another example</p>
+            <p class="ui-li-aside">Red</p></a>
+         </li>
+         <li><a href="#">
+            <img src="images/cherry.jpg" class="ui-li-thumb">
+            <h2>Fruits</h2>
+            <p>Cherry</p>
+            <p class="ui-li-aside">Fresh</p></a>
+         </li>
+         <li><a href="#">
+            <img src="images/grapes.jpg" class="ui-li-thumb">
+            <h2>Fruits</h2>
+            <p>Green Grapes</p>
+            <p class="ui-li-aside">1 Lb.</p></a>
+         </li>
+         <li><a href="#">
+            <img src="images/watermelon.jpg" class="ui-li-thumb">
+            <h2>Fruits</h2>
+            <p>Watermelon</p>
+            <p class="ui-li-aside">Big!</p></a>
+         </li>
+      </ul>
+		 
+		 
+		 
+		 
+     </div>
+   </div>
+   <div data-role="footer" data-theme="a">
+     <div data-role="navbar">
+         <ul>
+            <li><a href="index.html" data-prefetch="true" data-transition="flip">Details</a></li>
+            <li><a href="menu2-page_one.html" data-prefetch="true" data-transition="fade">Friends</a></li>
+            <li><a href="menu2-page_two.html" data-prefetch="true" data-transition="slide">Messages</a></li>
+            <li><a href="menu2-page_three.html" data-prefetch="true" data-transition="turn">Emails</a></li>
+         </ul>
+     </div>
+   </div>
+</body>
+</html>

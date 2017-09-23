@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<head>
+<title>Panel Responsive</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+<div data-role="page" class="jqm-demos ui-responsive-panel" id="responsive_page">
+   <div data-role="header">
+      <h2>Top Counter Products</h2>
+      <a href="#panel1" data-icon="home" data-iconpos="notext">Right Panel</a>
+      <a href="#panel2" data-icon="grid" data-iconpos="notext">Left Panel</a>
+   </div>
+   <div role="main" class="ui-content jqm-content jqm-fullwidth">
+      <h2>Panel Responsive</h2>
+      <p>It has two buttons in the header bar namely the left panel has the push display mode and the right panel reveal display mode. It allows both the panel menu and page to be used together when more space is available. It makes the panel responsive and allows panel menu and page to be used together. You can use custom specific breakpoint or use the breakpoint preset by adding the <code>class="ui-responsive-panel"</code> to the page container.</p>
+		<p>Another example ...</p> 
+		 <ul data-role="listview" data-inset="false">
+         <li><a href="index.html">
+            <img src="images/apple.jpg" class="ui-li-thumb">
+            <h2>Home</h2>
+            <p>Apple</p>
+            <p class="ui-li-aside">Red</p></a>
+         </li>
+         <li><a href="menu4.html">
+            <img src="images/cherry.jpg" class="ui-li-thumb">
+            <h2>Menu 4</h2>
+            <p>Cherry</p>
+            <p class="ui-li-aside">Fresh</p></a>
+         </li>
+		 <li data-role="list-divider">Forms View <span class="ui-li-count">4</span></li>
+         <li><a href="form1.html">
+            <img src="images/grapes.jpg" class="ui-li-thumb">
+            <h2>Form 1</h2>
+            <p>Green Grapes</p>
+            <p class="ui-li-aside">1 Lb.</p></a>
+         </li>
+         <li><a href="form2.html">
+            <img src="images/watermelon.jpg" class="ui-li-thumb">
+            <h2>Form 2</h2>
+            <p>Watermelon</p>
+            <p class="ui-li-aside">Big!</p></a>
+         </li>
+		  <li><a href="form3.html">
+            <img src="images/grapes.jpg" class="ui-li-thumb">
+            <h2>Form 3</h2>
+            <p>Green Grapes</p>
+            <p class="ui-li-aside">1 Lb.</p></a>
+         </li>
+		 <li><a href="form4.html">
+            <img src="images/grapes.jpg" class="ui-li-thumb">
+            <h2>Form 4</h2>
+            <p>Append and Remove</p>
+            <p class="ui-li-aside">1 Lb.</p></a>
+         </li>
+
+         <li data-role="list-divider">Info Tables <span class="ui-li-count">3</span></li>
+         <li><a href="table1.html">
+            <h2>Table 1</h2>
+            <p><strong>Team Meeting</strong></p>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p></a>
+            <p class="ui-li-aside"><strong>12:48</strong>PM</p>
+         </li>
+         <li><a href="table2.html">
+            <h2>Table 2</h2>
+            <p><strong>Updation of work</strong></p>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p></a>
+            <p class="ui-li-aside"><strong>4:01</strong>PM</p>
+         </li>
+         <li><a href="table3.html"><h2>Table 3</h2>
+            <p><strong>New Project Information</strong></p>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p></a>
+            <p class="ui-li-aside"><strong>09:25</strong>PM</p>
+         </li>
+      </ul>
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+   </div>
+   <div data-role="panel" data-display="push" data-theme="b" id="panel1">
+      <ul data-role="listview">
+         <li data-icon="delete"><a href="#" data-rel="close">Close Menu</a></li>
+         <li><a href="index.html" data-transition="fade"><img src="images/apple.jpg" class="ui-li-icon ui-corner-none">Home</a></li>
+         <li><a href="menu4.html">Menu 4<span class="ui-li-count">100</span></a></li>
+         <li><a href="#responsive_page1">HTML</a></li>
+         <li><a href="#responsive_page1">CSS</a></li>
+         <li><a href="#responsive_page1">PHP</a></li>
+         <li><a href="#responsive_page1">Bootstrap</a></li>
+         <li><a href="#responsive_page1">JavaScript</a></li>
+      </ul>
+   </div>
+   <div data-role="panel" data-position="right" data-display="overlay" data-theme="b" id="panel2">
+      <ul data-role="listview">
+         <li data-icon="delete"><a href="#" data-rel="close">Close Menu</a></li>
+         <li><a href="#panel3">Submenu:</a></li>
+         <li><a href="#responsive_page1">Ajax</a></li>
+         <li><a href="#responsive_page1">HTML</a></li>
+         <li><a href="#responsive_page1">CSS</a></li>
+         <li><a href="#responsive_page1">PHP</a></li>
+         <li><a href="#responsive_page1">Bootstrap</a></li>
+         <li><a href="#responsive_page1">JavaScript</a></li>
+      </ul>
+   </div>
+</div>
+</body>
+</html>

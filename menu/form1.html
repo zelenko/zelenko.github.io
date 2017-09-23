@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+   <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+   <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+
+<body>
+<div data-role="page">
+   <div data-role="header">
+      <h2>Form Inputs</h2>
+      <input type="search" name="src">
+   </div>
+   <div data-role="main" class="ui-content">
+      <form method="post" action="jquery_mobile/demo1.php">
+         <label for="fname">First Name</label>
+         <input type="text" name="fname">
+
+         <label for="email">Email Address</label>
+         <input type="email" name="email">
+
+         <label for="date">Birth Date</label>
+         <input type="date" name="date">
+
+         <label for="file">Upload File</label>
+         <input type="file" name="file">
+
+         Select Car
+         <fieldset data-role="controlgroup" name="checkbox">
+            <input type="checkbox" name="checkbox" id="checkbox">
+            <label for="checkbox">BMW</label>
+
+            <input type="checkbox" name="checkbox" id="checkbox1">
+            <label for="checkbox1">Audi</label>
+
+            <input type="checkbox" name="checkbox" id="checkbox2">
+            <label for="checkbox2">Skoda</label>
+         </fieldset>
+
+         Gender
+         <fieldset data-role="controlgroup">
+            <input type="radio" name="radio" id="radio">
+            <label for="radio">Male</label>
+
+            <input type="radio" name="radio" id="radio1">
+            <label for="radio1">Female</label>
+        </fieldset>
+
+        <label for="slider">Range</label>
+        <input type="range" name="slider" id="slider" value="20" min="0" max="100" data-highlight="true">
+
+        <input type="submit" value="Submit" data-inline="true">
+      </form>
+   </div>
+</div>
+</body>
+</html>

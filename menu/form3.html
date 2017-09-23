@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+  <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+<h2>Listview Form Example</h2>
+<form>
+<ul data-role="listview" data-inset="true">
+   <li class="ui-field-contain">
+      <label for="name">Text</label>
+      <input type="text" id="name" data-clear-btn="true">
+   </li>
+   <li class="ui-field-contain">
+      <label for="textarea">Textarea</label>
+      <textarea cols="40" rows="8" id="textarea"></textarea>
+   </li>
+   <li class="ui-field-contain">
+      <label for="flip">Flip switch</label>
+      <select id="flip" data-role="slider">
+         <option value="off">Off</option>
+         <option value="on">On</option>
+      </select>
+   </li>
+   <li class="ui-field-contain">
+      <label for="slider">Slider</label>
+      <input type="range" id="slider" value="0" min="0" max="100" data-highlight="true">
+   </li>
+   <li class="ui-field-contain">
+      <label for="select-choice" class="select">Select option</label>
+      <select name="select-choice" id="select-choice-1">
+         <option>Standard</option>
+         <option>Premium</option>
+         <option>Deluxe</option>
+      </select>
+   </li>
+   <li class="ui-body ui-body-b">
+      <fieldset class="ui-grid-a">
+         <div class="ui-block-a"><button type="submit" class="ui-btn ui-corner-all ui-btn-a">Submit</button></div>
+         <div class="ui-block-b"><button type="Cancel" class="ui-btn ui-corner-all ui-btn-a">Cancel</button></div>
+      </fieldset>
+   </li>
+</ul>
+</form>
+</body>
+</html>

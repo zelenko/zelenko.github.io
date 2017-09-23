@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+  <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+
+
+<div data-role="collapsibleset" data-theme="a" data-inset="false">
+   <div data-role="collapsible">
+      <h2>Thumbnail</h2>
+      <ul data-role="listview" data-split-icon="gear" data-split-theme="a" data-inset="true">
+         <li><a href="menu3.html">
+            <img src="images/facebook.jpg">
+            <h2>Menu 3</h2>
+            <p>Mark Zukerburg</p></a>
+            <a href="#purchase" data-rel="popup" data-position-to="window" data-transition="pop">Login</a>
+         </li>
+         <li><a href="#"><img src="images/twitter.jpg">
+            <h2>Twitter</h2>
+            <p>Jack Dorsey</p></a>
+            <a href="#purchase" data-rel="popup" data-position-to="window" data-transition="pop">Login</a>
+         </li>
+         <li><a href="#"><img src="images/google.jpg">
+            <h2>Google+</h2>
+            <p>Google</p></a>
+            <a href="#purchase" data-rel="popup" data-position-to="window" data-transition="pop">Login</a>
+         </li>
+      </ul>
+      <div data-role="popup" id="purchase" data-theme="a" data-overlay-theme="b" class="ui-content" >
+         <h3>Social Media Sites</h3>
+         Login in your mobile device
+         <a href="index.html" data-rel="back" class="ui-shadow ui-btn ui-btn-b ui-icon-check ui-btn-icon-left ui-btn-inline ui-mini">Home</a>
+         <a href="index.html" data-rel="back" class="ui-shadow ui-btn ui-btn-inline ui-mini">Home</a>
+      </div>
+   </div>
+   <div data-role="collapsible">
+      <h2>Formatted Content</h2>
+      <ul data-role="listview" data-inset="true">
+         <li data-role="list-divider">Wednesday, January 13, 2016 <span class="ui-li-count">2</span></li>
+         <li><a href="#">
+            <h2>John</h2>
+            <p><strong>Team Meeting</strong></p>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p></a>
+            <p class="ui-li-aside"><strong>12:48</strong>PM</p>
+         </li>
+         <li><a href="#">
+            <h2>Albert</h2>
+            <p><strong>Updation of work</strong></p>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p></a>
+            <p class="ui-li-aside"><strong>4:01</strong>PM</p>
+         </li>
+         <li data-role="list-divider">Thursday, January 14, 2016 <span class="ui-li-count">2</span></li>
+         <li><a href="#"><h2>Joy</h2>
+            <p><strong>New Project Information</strong></p>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p></a>
+            <p class="ui-li-aside"><strong>09:25</strong>PM</p>
+         </li>
+      </ul>
+   </div>
+   <div data-role="collapsible">
+      <h2> Filter</h2>
+      <ul data-role="listview" data-inset="true" data-filter="true" data-filter-placeholder="Search">
+         <li><a href="#">Chennai</a></li>
+         <li><a href="#">Belgaum</a></li>
+         <li><a href="#">Bangalore</a></li>
+         <li><a href="#">Pune </a></li>
+         <li><a href="#">Mumbai</a></li>
+         <li><a href="#">Delhi</a></li>
+      </ul>
+   </div>
+</div>
+</body>
+</html>

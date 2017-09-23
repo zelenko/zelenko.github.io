@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+ <link rel="stylesheet" href="http://demos.jquerymobile.com/1.4.5/_assets/css/jqm-demos.css">
+ <script src="http://demos.jquerymobile.com/1.4.5/js/jquery.js"></script>
+	<script src="http://demos.jquerymobile.com/1.4.5/_assets/js/index.js"></script>
+	<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+	 <!--<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>--
+	
+	
+	
+	
+	<link rel="stylesheet" href="../css/themes/default/jquery.mobile-1.4.5.min.css">
+	<link rel="stylesheet" href="../_assets/css/jqm-demos.css">
+	<script src="../js/jquery.js"></script>
+	<script src="../_assets/js/index.js"></script>
+	<script src="../js/jquery.mobile-1.4.5.min.js"></script>-->
+	
+  
+  <script>
+		( function( $, undefined ) {
+			var counter = 0;
+			$( document ).bind( "pagecreate", function( e ) {
+				$( "#prepend, #append", e.target ).on( "click", function( e ) {
+					counter++;
+
+					var widgetType = $( "[name='radio-widget']:checked" ).attr( "id" ),
+						group = $( "#my-controlgroup" ),
+						$el,
+						action = function() {
+							var action = $( "[name='radio-action']:checked" ).attr( "id" );
+							if ( $( $el[1] ).is( "select" ) && action === "hide" ) {
+								$el = $( $el[1] ).parents( ".ui-select" );
+							}
+							$el[ action ]();
+							group.controlgroup( "refresh" );
+						};
+
+					if ( widgetType === "link" ) {
+
+						$el = $( "<a href='#'>Link " + counter + "</a>" ).bind( "click", action );
+						$( "#my-controlgroup" ).controlgroup( "container" )[ $( this ).attr( "id" ) ]( $el );
+						$el.buttonMarkup();
+
+					} else if ( widgetType === "select" ) {
+
+						$el = $( "<label for='widget" + counter + "'>Select " + counter + "</label><select id='widget" + counter + "'><option value='option1'>Select " + counter + "</option><option value='option2'>Select option</option></select>" );
+						$( $el[ 1 ] ).bind( "change", action);
+						$( "#my-controlgroup" ).controlgroup( "container" )[ $( this ).attr( "id" ) ]( $el );
+						$( $el[ 1 ] ).selectmenu();
+
+					} else {
+
+						$el = $( "<label for='widget" + counter + "'>Checkbox " + counter + "</label><input type='checkbox' id='widget" + counter + "'></input>" );
+						$( $el[ 1 ] ).bind( "change", action );
+						$( "#my-controlgroup" ).controlgroup( "container" )[ $( this ).attr( "id" ) ]( $el );
+						$( $el[ 1 ] ).checkboxradio();
+
+					}
+
+					group.controlgroup( "refresh" );
+				});
+
+				$( "[name='radio-orientation']" ).bind( "change", function( e ) {
+					$( "#my-controlgroup" ).controlgroup( "option", "type", ( $( "#isHorizontal" ).is( ":checked" ) ? "horizontal" : "vertical" ) );
+				});
+			});
+		})( jQuery );
+	</script>
+</head>
+<body>
+<div data-role="page" class="jqm-demos">
+
+
+
+	<div role="main" class="ui-content jqm-content">
+
+<h2>Listview Form Example</h2>
+<div data-demo-html="true" data-demo-js="true">
+<form>
+    <div class="ui-body ui-body-d ui-corner-all">
+        <p>Controlgroup...</p>
+        <div data-role="controlgroup" id="my-controlgroup"><!-- items will be injected here --></div>
+    </div>
+</form>
+<div class="ui-field-contain">
+    <label for="prepend">Add item</label>
+    <button id="prepend" data-mini="true" data-inline="true">Prepend</button>
+    <label for="append" class="ui-hidden-accessible">Action</label>
+    <button id="append" data-mini="true" data-inline="true">Append</button>
+</div>
+<form action="#" method="get">
+    <div class="ui-field-contain">
+        <fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">
+            <legend>Widget type</legend>
+            <input name="radio-widget" id="link" value="link" checked="checked" type="radio">
+            <label for="link">Link</label>
+            <input name="radio-widget" id="select" value="select" type="radio">
+            <label for="select">Select</label>
+            <input name="radio-widget" id="checkbox" value="checkbox" type="radio">
+            <label for="checkbox">Checkbox</label>
+        </fieldset>
+    </div>
+    <div class="ui-field-contain">
+        <fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">
+            <legend>Action<br><small>on click/change</small></legend>
+            <input name="radio-action" id="remove" value="remove" checked="checked" type="radio">
+            <label for="remove">Remove</label>
+            <input name="radio-action" id="hide" value="hide" type="radio">
+            <label for="hide">Hide</label>
+            <input name="radio-action" id="width" value="width" type="radio">
+            <label for="width">Nothing</label>
+        </fieldset>
+    </div>
+    <div class="ui-field-contain">
+        <fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">
+            <legend>Switch orientation</legend>
+            <input name="radio-orientation" id="isVertical" value="isVertical" checked="checked" type="radio">
+            <label for="isVertical">Vertical</label>
+            <input name="radio-orientation" id="isHorizontal" value="isHorizontal" type="radio">
+            <label for="isHorizontal">Horizontal</label>
+        </fieldset>
+    </div>
+</form>
+</div></div></div>
+</body>
+</html>

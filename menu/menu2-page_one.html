@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+   <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+   <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+   <script>
+	      $(function() {
+	         $( "[data-role='navbar']" ).navbar();
+	         $( "[data-role='header'], [data-role='footer']" ).toolbar();
+	      });
+	      // Update the the toolbar's contents
+	      $( document ).on( "pagecontainerchange", function() {
+	         // Each of the 4 pages in this example has a data-title attribute
+	         // which value is equal to the nav button's text
+	         // For e.g., on first page: <div data-role="page" data-title="Details">
+	         var current = $( ".ui-page-active" ).jqmData( "title" );
+	         // Change the heading
+	         $( "[data-role='header'] h1" ).text( current );
+	         // Remove active class
+	         $( "[data-role='navbar'] a.ui-btn-active" ).removeClass( "ui-btn-active" );
+	         // Add active class to current nav button
+	         $( "[data-role='navbar'] a" ).each(function() {
+	            if ( $( this ).text() === current ) {
+	               $( this ).addClass( "ui-btn-active" );
+	            }
+	         });
+	      });
+   </script>
+</head>
+<body>
+   <div data-role="header" data-position="fixed" data-theme="a">
+      <a href="" data-rel="back" class="ui-btn ui-btn-left ui-alt-icon ui-nodisc-icon ui-corner-all ui-btn-icon-notext ui-icon-carat-l">Back</a>
+      <h1>Friends</h1>
+   </div>
+
+   <div data-role="page" data-title="Friends">
+      <div class="ui-content" role="main">
+         <ul data-role="listview" data-theme="a" data-dividertheme="e" data-filter="true" data-filter-theme="a" data-filter-placeholder="Search Your Friends...">
+	        <li><a href="menu.htm">Menu</a></li>
+	    	<li><a href="image.html">Image</a></li>
+			<li><a href="test.htm">Test</a></li>
+			<li><a href="menu3.html">Menu 3</a></li>
+			<li><a href="#">Bharath</a></li>
+			<li><a href="#">Chris Harris</a></li>
+			<li><a href="#">Curt Angle</a></li>
+			<li><a href="#">Cooper</a></li>
+			<li><a href="#">David</a></li>
+			<li><a href="#">Elizee</a></li>
+			<li><a href="#">Elen</a></li>
+			<li><a href="#">Gavin</a></li>
+			<li><a href="#">Geeta</a></li>
+			<li><a href="#">Naveen</a></li>
+			<li><a href="#">Peter Karem</a></li>
+			<li><a href="#">Prashanth</a></li>
+			<li><a href="#">Rita Sharma</a></li>
+			<li><a href="#">Wasim Jaffer</a></li>
+		</ul>
+   	  </div>
+   </div>
+   <div data-role="footer" data-position="fixed" data-theme="a">
+      <div data-role="navbar">
+			<ul>
+				<li><a href="/jquery_mobile/src/navbar_persistent.html" data-prefetch="true" data-transition="flip">Details</a></li>
+				<li><a href="/jquery_mobile/src/page_one.html" data-prefetch="true" data-transition="fade">Friends</a></li>
+				<li><a href="/jquery_mobile/src/page_two.html" data-prefetch="true" data-transition="slide">Messages</a></li>
+				<li><a href="/jquery_mobile/src/page_three.html" data-prefetch="true" data-transition="turn">Emails</a></li>
+			</ul>
+      </div>
+   </div>
+</body>
+</html>

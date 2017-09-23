@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Use navbar for tabs</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+   <link rel="stylesheet" href="http://demos.jquerymobile.com/1.4.5/_assets/css/jqm-demos.css">
+   <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+   <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+   <div data-role="page" class="jqm-demos" data-quicklinks="true">
+      <div data-demo-html="true">
+         <div data-role="tabs">
+            <div data-role="navbar">
+               <ul>
+                  <li><a href="#one" data-theme="a" data-ajax="false">Tab one</a></li>
+                  <li><a href="#two" data-theme="a" data-ajax="false">Tab two</a></li>
+                  <li><a href="/jquery_mobile/src/tabs_navbars2.html" data-theme="a" data-ajax="false">Tab three</a></li>
+               </ul>
+            </div>
+
+            <div id="one" class="ui-content">
+               <h1>This is first tab content</h1>
+            </div>
+            <div id="two" class="ui-content">
+               <ul data-role="listview">
+                  <li><a href="#">Audi</a></li>
+                  <li><a href="#">Hyundai</a></li>
+                  <li><a href="menu2.htm">Honda</a></li>
+               </ul>
+            </div>
+         </div>
+         <div data-role="footer" data-position="fixed" data-tap-toggle="true" class="jqm-footer">
+            <p>Tutorialspoint jQuery Mobile<span class="jqm-version"></span></p>
+            <p>Copyright 2016 Tutorialspoint</p>
+         </div>
+      </div>
+   </div>
+</body>
+</html>
