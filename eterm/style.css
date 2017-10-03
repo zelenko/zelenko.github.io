@@ -3,13 +3,36 @@
   src: url('eclipse.ttf') format('truetype');
   font-weight: bold; 
 }
+body {background-color: gray;}
 
 #navigation {
+  /*
   margin-bottom: 200px;
-  border:1px solid red;
+  
   width: 70%;
   padding:30px;
   display:inline-block;
+  */
+
+  border: 0px solid #eeeeee;
+  border-style: double;
+  position: fixed; 
+  width: 50%; /* Set your desired with */
+  z-index: 2; /* Make sure its above other items. */
+  top: 50%;
+  left: 50%;
+  margin-top: -15%; /* Changes with height. */
+  margin-left: -25%; /* Your width divided by 2. */
+  height: 500px;
+  background-color: #000000;
+}
+
+#colors {
+  color: #ffff00;
+  background-color:#000080;
+  
+  hover-color: #000000;
+  hover-background-color:#808081;
 }
 
 #menuv {
@@ -19,18 +42,19 @@
   font-family: 'Eclipse', 'Courier New', Arial, Helvetica, sans-serif;
   font-weight:600;
   font-size: 1em;
-  color: #008000;
+  color: #ffff00;
   border:0px solid #dddddd;
-  background-color:#eeefff;
+  background-color:#000080;
   display: inline-block;
-  float:right;
+  float:left;
+  width: 100%;
 }
 
 /* Properties for TOP horizontal menu; top menu items only */
 #menuv > li {
   float:left;
   margin:4px; /* space between top menu items  */
-  background-color:#eeefff;
+  background-color:#000080;
   padding:8px;
   list-style-type:none;
   font-weight:600;
@@ -38,14 +62,14 @@
 }
 /* top menu HOVER keyboard only */
 #menuv > .olishow {
-  background-color: #cccfff;
+  background-color: #808081;
   text-decoration:none;
-  border:0px red solid;
-  color: #e60000;
+  border:0px;
+  color: #000000;
 }
 /* top menu hover for keyboard onlyl */
 #menuv > .olishow > a {
-  color:#e60000;
+  color:#000000;
   text-decoration:none;
 }
 
@@ -56,13 +80,13 @@
 #menuv > li.oli > a:visited {
   padding: 8px 0px 8px 0px; /* top, right, botom, left */
   text-decoration:none;
-  color: #008000;
+  color: #ffff00;
 }
 
 /* top menu hover for items with no submenu, for mouse only */
 #menuv > li.oli > a:hover, #menuv > li.oli:hover {
-  background-color: #cccfff;
-  color: #e60000;
+  background-color: #808081;
+  color: #000000;
 }
 
 /* Properties for vertical menu */
@@ -71,7 +95,7 @@
   position:absolute;
   margin:8px auto auto -8px; /*top, right, bottom, left  */
   padding:0px;
-  color: #e60000;
+  color: #ffff00;
 }
 /* items inside vertical summenu */
 #menuv>li>ul>li {
@@ -91,8 +115,8 @@
 /* Links in sub-menu */
 #menuv ul li a {
   display:block;
-  background-color:#eeefff;
-  color:#008000;
+  background-color:#000080;
+  color:#ffff00;
   font-weight:600;
   padding:8px;
   text-decoration:none;
@@ -100,8 +124,8 @@
 
 /* This is for items selected with keyboard shortcuts or highligted with Mouse */
 #menuv ul li a:hover, #menuv ul .vlishow a {
-  background-color:#cccfff;
+  background-color:#808081;
   text-decoration:none;
-  color:#e60000;
+  color:#000000;
 }
 
