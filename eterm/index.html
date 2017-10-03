@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Navigation menu with keyboard shortcuts</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="JavaScript navigation menu with keyboard shortcuts">
+    <link rel="stylesheet" href="style.css">
+    <meta name="author" content="zeLenko.org">
+
+</head>
+
+<body>
+
+<div id="navigation">
+
+<ul id="menuv">
+ <li class="oli"><a onclick="writer('homepage')" href="javascript:;" title="Home">F1-Home</a></li>
+ <li class="oli">F2-CSS Tutorials&#9660;
+  <ul>
+   <li><a onclick="writer('border')" href="javascript:;" title="Border properties">Border properties</a></li>
+   <li><a onclick="writer('opacity')" href="javascript:;" title="opacity">Oopacity</a></li>
+  </ul>
+ </li>
+ <li class="oli">F8-HTML Tutorials&#9660;
+  <ul>
+   <li><a onclick="writer('quick')" href="javascript:;" title="HTML5 Quick Tutorial">Q- Quick Tutorial</a></li>
+   <li><a onclick="writer('canvas')" href="javascript:;" title="HTML5 canvas Tutorial">C- canvas Tutorial</a></li>
+   <li><a onclick="writer('this.title')" href="javascript:;" title="HTML5 New Tags">N- New Tags</a></li>
+  </ul>
+ </li>
+ <li class="oli"><a onclick="writer('Contact')" href="javascript:;" title="Contact">F9-Contact</a></li>
+</ul>
+
+</div>
+
+<div style="clear: both" />
+    <div id="block">nothing</div><br><br><br><br><br>
+    <div id="block2">nothing</div><br>
+    <div id="url">nothing</div>
+</div>
+    <script type="text/javascript" src="menu.js"></script>
+
+</body>
+
+</html>

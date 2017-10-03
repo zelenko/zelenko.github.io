@@ -1,0 +1,107 @@
+@font-face {
+  font-family: 'Eclipse';
+  src: url('eclipse.ttf') format('truetype');
+  font-weight: bold; 
+}
+
+#navigation {
+  margin-bottom: 200px;
+  border:1px solid red;
+  width: 70%;
+  padding:30px;
+  display:inline-block;
+}
+
+#menuv {
+  position:relative;
+  padding:0px;
+  margin: 0px;
+  font-family: 'Eclipse', 'Courier New', Arial, Helvetica, sans-serif;
+  font-weight:600;
+  font-size: 1em;
+  color: #008000;
+  border:0px solid #dddddd;
+  background-color:#eeefff;
+  display: inline-block;
+  float:right;
+}
+
+/* Properties for TOP horizontal menu; top menu items only */
+#menuv > li {
+  float:left;
+  margin:4px; /* space between top menu items  */
+  background-color:#eeefff;
+  padding:8px;
+  list-style-type:none;
+  font-weight:600;
+  text-align:left;
+}
+/* top menu HOVER keyboard only */
+#menuv > .olishow {
+  background-color: #cccfff;
+  text-decoration:none;
+  border:0px red solid;
+  color: #e60000;
+}
+/* top menu hover for keyboard onlyl */
+#menuv > .olishow > a {
+  color:#e60000;
+  text-decoration:none;
+}
+
+/* top menu only for items with no submenu */
+#menuv > li.oli > a,
+#menuv > li.oli > a:link,
+#menuv > li.oli > a:active,
+#menuv > li.oli > a:visited {
+  padding: 8px 0px 8px 0px; /* top, right, botom, left */
+  text-decoration:none;
+  color: #008000;
+}
+
+/* top menu hover for items with no submenu, for mouse only */
+#menuv > li.oli > a:hover, #menuv > li.oli:hover {
+  background-color: #cccfff;
+  color: #e60000;
+}
+
+/* Properties for vertical menu */
+#menuv .oli ul, #menuv .olishow  ul {
+  display:none;
+  position:absolute;
+  margin:8px auto auto -8px; /*top, right, bottom, left  */
+  padding:0px;
+  color: #e60000;
+}
+/* items inside vertical summenu */
+#menuv>li>ul>li {
+  position:relative;
+  clear:both;
+  width:100%;
+  margin:0px 0;
+  padding:0px;
+  display:block;
+}
+
+/* Submenu block */
+#menuv li:hover ul, #menuv .olishow ul {
+  display:block;
+}
+
+/* Links in sub-menu */
+#menuv ul li a {
+  display:block;
+  background-color:#eeefff;
+  color:#008000;
+  font-weight:600;
+  padding:8px;
+  text-decoration:none;
+}
+
+/* This is for items selected with keyboard shortcuts or highligted with Mouse */
+#menuv ul li a:hover, #menuv ul .vlishow a {
+  background-color:#cccfff;
+  text-decoration:none;
+  color:#e60000;
+}
+
