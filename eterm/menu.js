@@ -34,16 +34,16 @@ function showOli(index) {
   if(crt_oli.getElementsByTagName('ul').length > 0 && crt_oli.getElementsByTagName('ul')[0].getElementsByTagName('li')) {
     vli = crt_oli.getElementsByTagName('ul')[0].getElementsByTagName('li');
     nrvli = vli.length;
-    document.getElementById("url").innerHTML = 'url 39: ' + url_adr;
+    //document.getElementById("url").innerHTML = 'url 39: ' + url_adr;
     showVli();     // calls showVli() to set class="vli" to all list in its vertical menu
 
-    document.getElementById("url").innerHTML = 'url 48: ' + url_adr;
+    //document.getElementById("url").innerHTML = 'url 48: ' + url_adr;
   }
   else {
     // if current horisontal menu no has vertical list
     // if contains a link, calls the function setUrlAdr() to add its "href" value in $url_adr
-    document.getElementById("block2").innerHTML = "no submenu, id: " + ih;
-    document.getElementById("url").innerHTML = 'url 53: ' + url_adr;
+    //document.getElementById("block2").innerHTML = "no submenu, id: " + ih;
+    //document.getElementById("url").innerHTML = 'url 53: ' + url_adr;
     if(crt_oli.getElementsByTagName('a').length > 0) {
       setUrlAdr(crt_oli.getElementsByTagName('a')[0]);
     } 
@@ -51,8 +51,8 @@ function showOli(index) {
     nrvli = 0;
 
     // this is for troubleshooting only
-    document.getElementById("block2").innerHTML = "error line 57, id: " + ih;
-    document.getElementById("url").innerHTML = 'url 61: ' + url_adr;
+    //document.getElementById("block2").innerHTML = "error line 57, id: " + ih;
+    //document.getElementById("url").innerHTML = 'url 61: ' + url_adr;
   }
 }
 
@@ -73,8 +73,8 @@ function showVli(index) {
       if(vli[index].getElementsByTagName('a').length > 0) setUrlAdr(vli[index].getElementsByTagName('a')[0]);
       
       // see what's in submenu
-      document.getElementById("block").innerHTML = "submenu " + vli[index].getElementsByTagName('a')[0] + " parent74: " + ih + " sub: " + iv;
-      document.getElementById("url").innerHTML = 'url 83: ' + url_adr;
+      //document.getElementById("block").innerHTML = "submenu " + vli[index].getElementsByTagName('a')[0] + " parent74: " + ih + " sub: " + iv;
+      //document.getElementById("url").innerHTML = 'url 83: ' + url_adr;
     }
   } 
 }
@@ -163,7 +163,7 @@ document.onkeydown = KeyCheck;
 
 // From Onclick functin, used by Mouse
 function writer(i){
-  document.getElementById("block").innerHTML = "Clicked on ID: " + i;
+  document.getElementById("block").innerHTML = "You clicked on: <b>" + i + "</b>";
   // reset all links visibility
   for(var i=0; i<nroli; i++) {
     oli[i].className = 'oli';
