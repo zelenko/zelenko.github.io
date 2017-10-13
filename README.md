@@ -1,14 +1,9 @@
-## zelenko.github.io
-My GibHub page: [zelenko.github.io](https://zelenko.github.io/)
-
-
-### Social Media Accounts
-
-* [LinkedIn](https://www.linkedin.com/in/vzelenko/)
-* [Twitter](https://twitter.com/vzelenko)
-* [500px](https://500px.com/zelenko)
-
-![Go](https://raw.githubusercontent.com/zelenko/golang-collection/master/web/pub/img/toby.jpg)
+| Social Media | Description |
+| :---- | :---- |
+| [zelenko.github.io](https://zelenko.github.io/) | My GitHub page |
+| [LinkedIn](https://www.linkedin.com/in/vzelenko/) | Profesional |
+| [Twitter](https://twitter.com/vzelenko) | Used for notes, brainstorming, updates, messages, news, and random "tweets" |
+| [500px](https://500px.com/zelenko) | Photos, pictures, creativity |
 
 
 ## 📖 Contribution
